@@ -1,30 +1,48 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+export default {
+  name : "App",
+  data() {
+    return {
+      headingId: "heading",
+      isDisabled: true,
+      status: "danger",
+      isPromoted: false,
+      isSoldout: true
+    }
+  }
+}
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <h2 v-bind:id="headingId">Heading</h2>
+  <button v-bind:disabled="isDisabled">Bind</button>
+  <h2 class="underline">Underlined Text</h2>
+  <h2 class="underline" v-bind:class="status">Status</h2>
+  <h2 v-bind:class="isPromoted && 'promoted'">Promoted Movie</h2>
+  <h2 v-bind:class="isSoldout ? 'sold-out' : 'new'">Soldout? Movie</h2>
+  <h2 v-bind:class="['new', 'promoted']">Newly promoted movie</h2>
+  <h2 v-bind:class="[isPromoted && 'promoted', isSoldout ? 'sold-out' : 'new']">Array Conditional movie</h2>
+  <h2 v-bind:class="{
+    promoted: isPromoted,
+    new: !isSoldout,
+    'sold-out': isSoldout
+  }">Object Conditional Movie</h2>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.underline {
+  text-decoration: underline;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.promoted {
+  font-style: italic;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.new {
+  color: olivedrab;
+}
+
+.sold-out {
+  color: red;
 }
 </style>
