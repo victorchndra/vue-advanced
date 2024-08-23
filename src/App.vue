@@ -7,7 +7,9 @@ export default {
       isDisabled: true,
       status: "danger",
       isPromoted: false,
-      isSoldout: true
+      isSoldout: true,
+      highlightColor: 'orange',
+      headerSize: 50
     }
   }
 }
@@ -27,6 +29,10 @@ export default {
     new: !isSoldout,
     'sold-out': isSoldout
   }">Object Conditional Movie</h2>
+
+  <h2 v-bind:style="{
+    color: highlightColor
+  }">Inline Style</h2>
 </template>
 
 <style scoped>
