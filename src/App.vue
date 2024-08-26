@@ -25,12 +25,18 @@
   <!-- <computed-properties /> -->
 
   <!-- Watcher -->
-  <watcher />
+  <!-- <watcher /> -->
+
+  <!-- Component Props -->
+  <component-props name="Victor" heroName="Spiderman" />
+  <component-props name="Chandra" heroName="Superman" />
+  <component-props :name="name" :heroName="channel" />
 </template>
 
 <script>
 import BasicVueBinding from './components/BasicVueBinding.vue';
 import BonusDirectives from './components/BonusDirectives.vue';
+import ComponentProps from './components/ComponentProps.vue';
 import ComputedProperties from './components/ComputedProperties.vue';
 import ConditionalRendering from './components/ConditionalRendering.vue';
 import EventHandling from './components/EventHandling.vue';
@@ -51,10 +57,14 @@ export default {
     EventHandling,
     BonusDirectives,
     ComputedProperties,
-    Watcher
+    Watcher,
+    ComponentProps
   },
   data() {
-    return {}
+    return {
+      name: 'Vishwas',
+      channel: 'Codevolution'
+    }
   },
   methods: {}
 }
