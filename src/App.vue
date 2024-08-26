@@ -16,12 +16,19 @@
   <!-- <event-handling /> -->
   
   <!-- Form Handling -->
-  <form-handling />
+  <!-- <form-handling /> -->
+
+  <!-- Bonus Directives -->
+  <!-- <bonus-directives /> -->
+
+  <!-- Computed Properties -->
+  <computed-properties />
 </template>
 
 <script>
 import BasicVueBinding from './components/BasicVueBinding.vue';
 import BonusDirectives from './components/BonusDirectives.vue';
+import ComputedProperties from './components/ComputedProperties.vue';
 import ConditionalRendering from './components/ConditionalRendering.vue';
 import EventHandling from './components/EventHandling.vue';
 import FormHandling from './components/FormHandling.vue';
@@ -37,7 +44,9 @@ export default {
     ConditionalRendering,
     ListRendering,
     Methods,
-    EventHandling
+    EventHandling,
+    BonusDirectives,
+    ComputedProperties
   },
   data() {
     return {
