@@ -22,7 +22,10 @@
   <!-- <bonus-directives /> -->
 
   <!-- Computed Properties -->
-  <computed-properties />
+  <!-- <computed-properties /> -->
+
+  <!-- Watcher -->
+  <watcher />
 </template>
 
 <script>
@@ -34,6 +37,7 @@ import EventHandling from './components/EventHandling.vue';
 import FormHandling from './components/FormHandling.vue';
 import ListRendering from './components/ListRendering.vue';
 import Methods from './components/Methods.vue';
+import Watcher from './components/Watcher.vue';
 
 export default {
   name: 'App',
@@ -46,16 +50,13 @@ export default {
     Methods,
     EventHandling,
     BonusDirectives,
-    ComputedProperties
+    ComputedProperties,
+    Watcher
   },
   data() {
-    return {
-
-    }
+    return {}
   },
-  methods: {
-
-  }
+  methods: {}
 }
 </script>
 
